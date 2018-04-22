@@ -3,10 +3,10 @@ var router = express.Router();
 var request = require('request-promise');
 var cookie = require('cookie');
 router.get('/', (req, res, next) => {
-    if (req.headers.cookie && cookie.parse(req.headers.cookie).access_token) {
+    if (process.env.SHOPIFY_TOKEN) {
         let shopRequestUrl = 'https://' + process.env.SHOPIFY_SHOP + '/admin/products.json';
         let shopRequestHeaders = {
-            'X-Shopify-Access-Token': cookie.parse(req.headers.cookie).access_token,
+            'X-Shopify-Access-Token': process.env.SHOPIFY_TOKEN,
         };
 
         //Request product

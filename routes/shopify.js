@@ -14,7 +14,8 @@ const scopes = process.env.SHOPIFY_SCOPE;
 
 
 router.get('/', (req, res, next) => {
-	if (req.headers.cookie && cookie.parse(req.headers.cookie).access_token) {
+
+	if (process.env.SHOPIFY_TOKEN) {
 		res.render('index');
 	} else {
 		// Request Token
@@ -84,7 +85,7 @@ router.get('/shopify/callback', (req, res, next) => {
 				json: accessTokenPayload
 			})
 			.then((accessTokenResponse) => {
-				res.cookie('access_token', accessTokenResponse.access_token);
+				process.env.SHOPIFY_TOKEN =accessTokenResponse.access_token;
 				res.redirect(forwardingAddress);
 			})
 			.catch((error) => {

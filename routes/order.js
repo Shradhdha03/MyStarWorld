@@ -6,10 +6,10 @@ var MongoClient = mongo.MongoClient;
 var cookie = require('cookie');
 router.post('/', (req, res, next) => {
 	//Request options and data
-	if (req.headers.cookie && cookie.parse(req.headers.cookie).access_token) {
+	if (process.env.SHOPIFY_TOKEN) {
 		let shopRequestUrl = 'https://' + process.env.SHOPIFY_SHOP + '/admin/orders.json';
 		let shopRequestHeaders = {
-			'X-Shopify-Access-Token': cookie.parse(req.headers.cookie).access_token,
+			'X-Shopify-Access-Token': process.env.SHOPIFY_TOKEN,
 		};
 
 		let data = null;
