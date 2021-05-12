@@ -14,10 +14,10 @@
     "express": "^4.17.1",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "mongodb": "^2.2.36",
-    "morgan": "^1.9.1",
+    "morgan": "~1.9.1",
     "nonce": "^1.0.4",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "mongodb": "^3.1.13",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
   }
 }
