@@ -7,17 +7,17 @@
   },
   "dependencies": {
     "cookie": "^0.3.1",
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "^1.4.5",
     "debug": "~2.6.9",
     "dotenv": "^5.0.1",
-    "ejs": "^2.5.9",
-    "express": "^4.16.3",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0",
+    "mongodb": "^2.2.36",
+    "morgan": "^1.9.1",
     "nonce": "^1.0.4",
-    "mongodb": "^2.2.33",
-    "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   }
 }
